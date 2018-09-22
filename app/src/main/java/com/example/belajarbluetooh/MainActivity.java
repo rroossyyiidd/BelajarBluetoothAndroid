@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int REQUEST_ENABLE_BT = 1; //declare globally
-    Button buttonOn, buttonOff, buttonPairedDevices, buttonScan;
+    Button buttonOn, buttonOff, buttonPairedDevices, buttonScan, buttonEnabling;
     BluetoothAdapter bluetoothAdapter;
     Intent enableBtIntent, i;
 
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOff = findViewById(R.id.btOff);
         buttonPairedDevices = findViewById(R.id.btNext);
         buttonScan = findViewById(R.id.btScan);
+        buttonEnabling= findViewById(R.id.btEnabling);
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -44,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 i = new Intent(getApplicationContext(), ScanNewDevices.class);
+                startActivity(i);
+            }
+        });
+
+        //ke halaman enabling discoverability
+        buttonEnabling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(getApplicationContext(), EnablingDiscoverability.class);
                 startActivity(i);
             }
         });

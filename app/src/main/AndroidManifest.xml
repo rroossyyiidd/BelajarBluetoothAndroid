@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.belajarbluetooh">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
 
@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PairedDevices" />
-        <activity android:name=".ScanNewDevices"/>
+        <activity android:name=".ScanNewDevices" />
+        <activity android:name=".EnablingDiscoverability"></activity>
     </application>
 
 </manifest>
