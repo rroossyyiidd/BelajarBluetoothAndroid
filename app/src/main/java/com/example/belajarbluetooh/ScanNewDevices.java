@@ -1,7 +1,6 @@
 package com.example.belajarbluetooh;
 
 import android.Manifest;
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -36,6 +35,9 @@ public class ScanNewDevices extends AppCompatActivity {
 
         buttonScan = findViewById(R.id.scanDevice);
         listView = findViewById(R.id.listBluetoothOn);
+
+        //untuk mendapatkan izin akses bluetooth android marshmallow
+        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1091); //Any number
 
         buttonScan.setOnClickListener(new View.OnClickListener() {
             @Override
