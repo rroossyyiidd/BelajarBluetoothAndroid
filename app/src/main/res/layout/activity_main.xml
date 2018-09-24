@@ -40,5 +40,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enabling Discoverability" />
+
+        <Button
+            android:id="@+id/btIntroHandler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intro handler" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

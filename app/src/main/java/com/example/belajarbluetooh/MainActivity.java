@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int REQUEST_ENABLE_BT = 1; //declare globally
-    Button buttonOn, buttonOff, buttonPairedDevices, buttonScan, buttonEnabling;
+    Button buttonOn, buttonOff, buttonPairedDevices, buttonScan, buttonEnabling, buttonIntroHander;
     BluetoothAdapter bluetoothAdapter;
     Intent enableBtIntent, i;
 
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         buttonPairedDevices = findViewById(R.id.btNext);
         buttonScan = findViewById(R.id.btScan);
         buttonEnabling= findViewById(R.id.btEnabling);
+        buttonIntroHander = findViewById(R.id.btIntroHandler);
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -54,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 i = new Intent(getApplicationContext(), EnablingDiscoverability.class);
+                startActivity(i);
+            }
+        });
+
+        //ke halaman intro handler
+        buttonIntroHander.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(getApplicationContext(), IntroHandler.class);
                 startActivity(i);
             }
         });

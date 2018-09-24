@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".PairedDevices" />
         <activity android:name=".ScanNewDevices" />
-        <activity android:name=".EnablingDiscoverability"></activity>
+        <activity android:name=".EnablingDiscoverability" />
+        <activity android:name=".IntroHandler"></activity>
     </application>
 
 </manifest>
